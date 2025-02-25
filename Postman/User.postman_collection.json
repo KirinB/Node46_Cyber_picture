@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "8de41d14-c266-4311-843b-2296c557f642",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39789009"
+	},
+	"item": [
+		{
+			"name": "get all user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/nguoi-dung",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"nguoi-dung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/nguoi-dung/4",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"nguoi-dung",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user for id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/nguoi-dung/4",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"nguoi-dung",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Kirin/Desktop/nhan.jpg"
+						},
+						{
+							"key": "hoTen",
+							"value": "Ly Minh Nhan",
+							"type": "text"
+						},
+						{
+							"key": "tuoi",
+							"value": "23",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/nguoi-dung/4",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"nguoi-dung",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

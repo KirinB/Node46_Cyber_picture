@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "faa16bfc-b828-4f56-af00-bfed930a3cac",
+		"name": "Save Image",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39789009"
+	},
+	"item": [
+		{
+			"name": "Create Save Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : 4,\r\n    \"pictureId\": 26\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/luu-anh/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"luu-anh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get save image for user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/luu-anh/user/4",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"luu-anh",
+						"user",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete save image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "userId",
+						"value": "4",
+						"type": "text"
+					},
+					{
+						"key": "pictureId",
+						"value": "24",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/luu-anh",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"luu-anh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
