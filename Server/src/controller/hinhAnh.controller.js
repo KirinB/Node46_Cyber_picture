@@ -5,7 +5,7 @@ export const hinhAnhController = {
   create: async function (req, res, next) {
     try {
       const result = await hinhAnhService.create(req);
-      const response = responseSuccess(result, `Create hinhAnh successfully`);
+      const response = responseSuccess(result, `Create image successfully`);
       res.status(response.code).json(response);
     } catch (err) {
       next(err);
@@ -15,7 +15,7 @@ export const hinhAnhController = {
   findAll: async function (req, res, next) {
     try {
       const result = await hinhAnhService.findAll(req);
-      const response = responseSuccess(result, `Get all hinhAnhs successfully`);
+      const response = responseSuccess(result, `Get all image successfully`);
       res.status(response.code).json(response);
     } catch (err) {
       next(err);
@@ -27,7 +27,7 @@ export const hinhAnhController = {
       const result = await hinhAnhService.findOne(req, next);
       const response = responseSuccess(
         result,
-        `Get hinhAnh #${req.params.id} successfully`
+        `Get image #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -40,7 +40,7 @@ export const hinhAnhController = {
       const result = await hinhAnhService.update(req);
       const response = responseSuccess(
         result,
-        `Update hinhAnh #${req.params.id} successfully`
+        `Update image #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -53,7 +53,7 @@ export const hinhAnhController = {
       const result = await hinhAnhService.remove(req);
       const response = responseSuccess(
         result,
-        `Remove hinhAnh #${req.params.id} successfully`
+        `Remove image #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -75,7 +75,10 @@ export const hinhAnhController = {
   getImageForUser: async function (req, res, next) {
     try {
       const result = await hinhAnhService.getImageForUser(req);
-      const response = responseSuccess(result, `getImageForUser successfully`);
+      const response = responseSuccess(
+        result,
+        `Get image for user successfully`
+      );
       res.status(response.code).json(response);
     } catch (err) {
       next(err);

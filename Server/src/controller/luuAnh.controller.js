@@ -5,7 +5,10 @@ export const luuAnhController = {
   create: async function (req, res, next) {
     try {
       const result = await luuAnhService.create(req);
-      const response = responseSuccess(result, `Create luuAnh successfully`);
+      const response = responseSuccess(
+        result,
+        `Create save image successfully`
+      );
       res.status(response.code).json(response);
     } catch (err) {
       next(err);
@@ -15,7 +18,10 @@ export const luuAnhController = {
   findAll: async function (req, res, next) {
     try {
       const result = await luuAnhService.findAll(req);
-      const response = responseSuccess(result, `Get all luuAnhs successfully`);
+      const response = responseSuccess(
+        result,
+        `Get all save image successfully`
+      );
       res.status(response.code).json(response);
     } catch (err) {
       next(err);
@@ -27,7 +33,7 @@ export const luuAnhController = {
       const result = await luuAnhService.findOne(req);
       const response = responseSuccess(
         result,
-        `Get luuAnh #${req.params.id} successfully`
+        `Get save image #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -40,7 +46,7 @@ export const luuAnhController = {
       const result = await luuAnhService.update(req);
       const response = responseSuccess(
         result,
-        `Update luuAnh #${req.params.id} successfully`
+        `Update save image #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -53,7 +59,7 @@ export const luuAnhController = {
       const result = await luuAnhService.remove(req);
       const response = responseSuccess(
         result,
-        `Remove luuAnh #${req.params.id} successfully`
+        `Remove save image #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -65,7 +71,7 @@ export const luuAnhController = {
       const result = await luuAnhService.getSaveImageForUser(req);
       const response = responseSuccess(
         result,
-        `getSaveImageForUser luuAnh #${req.params.id} successfully`
+        `Get save image for user successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {

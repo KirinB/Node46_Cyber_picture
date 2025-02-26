@@ -5,7 +5,7 @@ export const nguoiDungController = {
   create: async function (req, res, next) {
     try {
       const result = await nguoiDungService.create(req);
-      const response = responseSuccess(result, `Create nguoiDung successfully`);
+      const response = responseSuccess(result, `Create user successfully`);
       res.status(response.code).json(response);
     } catch (err) {
       next(err);
@@ -15,10 +15,7 @@ export const nguoiDungController = {
   findAll: async function (req, res, next) {
     try {
       const result = await nguoiDungService.findAll(req);
-      const response = responseSuccess(
-        result,
-        `Get all nguoiDungs successfully`
-      );
+      const response = responseSuccess(result, `Get all user successfully`);
       res.status(response.code).json(response);
     } catch (err) {
       next(err);
@@ -30,7 +27,7 @@ export const nguoiDungController = {
       const result = await nguoiDungService.findOne(req);
       const response = responseSuccess(
         result,
-        `Get nguoiDung #${req.params.id} successfully`
+        `Get user #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -43,7 +40,7 @@ export const nguoiDungController = {
       const result = await nguoiDungService.update(req);
       const response = responseSuccess(
         result,
-        `Update nguoiDung #${req.params.id} successfully`
+        `Update user #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -56,7 +53,7 @@ export const nguoiDungController = {
       const result = await nguoiDungService.remove(req);
       const response = responseSuccess(
         result,
-        `Remove nguoiDung #${req.params.id} successfully`
+        `Remove user #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {

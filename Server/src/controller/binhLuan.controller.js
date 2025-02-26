@@ -5,7 +5,7 @@ export const binhLuanController = {
   create: async function (req, res, next) {
     try {
       const result = await binhLuanService.create(req);
-      const response = responseSuccess(result, `Create binhLuan successfully`);
+      const response = responseSuccess(result, `Create comment successfully`);
       res.status(response.code).json(response);
     } catch (err) {
       next(err);
@@ -15,10 +15,7 @@ export const binhLuanController = {
   findAll: async function (req, res, next) {
     try {
       const result = await binhLuanService.findAll(req);
-      const response = responseSuccess(
-        result,
-        `Get all binhLuans successfully`
-      );
+      const response = responseSuccess(result, `Get all comment successfully`);
       res.status(response.code).json(response);
     } catch (err) {
       next(err);
@@ -30,7 +27,7 @@ export const binhLuanController = {
       const result = await binhLuanService.findOne(req);
       const response = responseSuccess(
         result,
-        `Get binhLuan #${req.params.id} successfully`
+        `Get comment #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -43,7 +40,7 @@ export const binhLuanController = {
       const result = await binhLuanService.update(req);
       const response = responseSuccess(
         result,
-        `Update binhLuan #${req.params.id} successfully`
+        `Update comment #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -56,7 +53,7 @@ export const binhLuanController = {
       const result = await binhLuanService.remove(req);
       const response = responseSuccess(
         result,
-        `Remove binhLuan #${req.params.id} successfully`
+        `Remove comment #${req.params.id} successfully`
       );
       res.status(response.code).json(response);
     } catch (err) {
@@ -66,7 +63,10 @@ export const binhLuanController = {
   getCommentForPicture: async function (req, res, next) {
     try {
       const result = await binhLuanService.getCommentForPicture(req);
-      const response = responseSuccess(result, `Lay Binh luan theo anh`);
+      const response = responseSuccess(
+        result,
+        `Get comment for picture successfully`
+      );
       res.status(response.code).json(response);
     } catch (err) {
       next(err);
